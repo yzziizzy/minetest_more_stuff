@@ -61,7 +61,7 @@ minetest.register_node(modname..":full_nest", {
 
 minetest.register_craftitem(modname..":small_egg", {
 	description = "Small Egg",
-	inventory_image = modname.."small_egg.png",
+	inventory_image = modname.."_small_egg.png",
 	stack_max = 99,
 })
 

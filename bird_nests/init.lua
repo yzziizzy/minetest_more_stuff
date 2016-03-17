@@ -44,7 +44,7 @@ minetest.register_node(modname..":full_nest", {
 		type = "fixed",
 		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 	},
-	drops = {
+	drop = {
 		items = {
 			max_items = 1,
 			{

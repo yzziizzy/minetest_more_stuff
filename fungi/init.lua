@@ -129,28 +129,6 @@ minetest.register_node(modname..":jack_o_lantern", {
 
 
 
-local growaction = function(pos, node)
-	pos.y = pos.y + 1
-	local over = minetest.get_node_or_nil(pos)
-	if over == nil or over.name ~= "air" then
-		return
-	end
-	
-	local r = math.random(1, 100)
-	
-	if r <= 2 then
-		minetest.set_node(pos, {name=modname..":stinkhorn"})
-	elseif r <= 10 then
-		minetest.set_node(pos, {name=modname..":jack_o_lantern"})
-	elseif r <= 55 then
-		minetest.set_node(pos, {name=modname..":puffball"})
-	else
-		minetest.set_node(pos, {name=modname..":morel"})
-	end
-end
-
-
-
 minetest.register_abm({
 	nodenames = {"default:dirt", "default:dirt_with_grass"},
 	interval = 120,

@@ -19,7 +19,7 @@ minetest.register_node(modname..":pink", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = true,
-	groups = {snappy = 3, flammable = 2, attached_node = 1, bird_nest = 1},
+	groups = {snappy = 3, flammable = 2, attached_node = 1},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
@@ -66,8 +66,8 @@ end
 
 minetest.register_abm({
 	nodenames = {"default:cactus"},
-	interval = 2,
-	chance = 1,
+	interval = 120,
+	chance = 10,
 	catch_up = true,
 	action = growaction,
 })
